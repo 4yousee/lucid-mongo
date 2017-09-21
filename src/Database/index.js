@@ -146,7 +146,7 @@ Database.connection = function (connection) {
         ? `${process.env.DB_USER}:${process.env.DB_PASSWORD}@`
         : (process.env.DB_USER ? `${process.env.DB_USER}@` : '')
 
-      const authString = (process.env.DB_AUTH_SOURCE && DB_AUTH_MECHANISM)
+      const authString = (process.env.DB_AUTH_SOURCE && process.env.DB_AUTH_MECHANISM)
       ? `?authSource=${process.env.DB_AUTH_SOURCE}&authMechanism=${process.env.DB_AUTH_MECHANISM}`
       : ''
 
